@@ -13,7 +13,7 @@ Follow these steps to run the models:
 
 Clone the repository to your local machine:
 
-`git clone [https://github.com/<username>/<repository-name>.git](https://github.com/NEUTLAN/neutlan.model.deployment.git)`
+`git clone https://github.com/NEUTLAN/neutlan.model.deployment.git`
 
 Navigate to the cloned repository directory:
 
