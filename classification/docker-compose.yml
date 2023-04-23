@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tfserving_cnn:
+    image: tensorflow/serving:latest
+    ports:
+      - "8501:8501"
+    environment:
+      MODEL_NAME: cnn
+    volumes:
+      - type: bind
+        source: ./cnn/1
+        target: /models/cnn/1
