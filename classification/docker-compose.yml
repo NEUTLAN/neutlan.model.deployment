@@ -7,6 +7,4 @@ services:
     environment:
       MODEL_NAME: cnn
     volumes:
-      - type: bind
-        source: ./cnn/1
-        target: /models/cnn/1
+      - ./cnn/1:/models/cnn/1
