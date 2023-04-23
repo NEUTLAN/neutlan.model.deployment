@@ -27,8 +27,8 @@ setup:
 clean:
 	rm -rf venv
 	pkill uvicorn 
-	docker container stop classification-tfserving_cnn-1
-	docker container rm classification-tfserving_cnn-1
+	sudo docker container stop classification-tfserving_cnn-1
+	sudo docker container rm classification-tfserving_cnn-1
 
 clean-cnn:
 	docker container stop classification-tfserving_cnn-1
