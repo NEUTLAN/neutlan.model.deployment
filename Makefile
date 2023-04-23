@@ -3,7 +3,7 @@ deploy:
 	$(MAKE) cnn;
 	
 cnn:
-	cd classification && docker-compose up -d;
+	cd classification && sudo docker-compose up -d;
 
 recommend:
 	cd paraphrase && \
