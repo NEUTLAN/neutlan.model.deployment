@@ -1,7 +1,7 @@
 
 deploy:
 	$(MAKE) cnn;
-	
+	$(MAKE) recommend;
 cnn:
 	cd classification && sudo docker-compose up -d;
 
