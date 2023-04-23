@@ -1,9 +1,13 @@
 
 deploy:
-	$(MAKE) cnn
-
+	$(MAKE) cnn;
+	
 cnn:
+	cd classification && docker-compose up -d;
+
+recommend:
 	cd paraphrase && \
+	pwd && \
 	test ! -f venv && python3 -m venv venv && \
 	cd .. && \
 	$(MAKE) setup;
@@ -18,10 +22,13 @@ setup:
 	. venv/bin/activate && \
 	python3 -m pip install --upgrade pip && \
 	pip3 install -r requirements.txt && \
-	uvicorn main:paraphraser --host 0.0.0.0 --port 8000 &
+	nohup uvicorn main:paraphraser --host 0.0.0.0 --port 8000 &
 
 clean:
 	rm -rf venv
+	pkill uvicorn 
+	docker container stop classification-tfserving_cnn-1
+	docker container rm classification-tfserving_cnn-1
 
 windows:
 	python3 -m venv venv
