@@ -1,0 +1,13 @@
+sentence-splitter==1.4
+huggingface-hub==0.13.3
+tokenizers==0.13.2
+transformers==4.27.4
+SentencePiece==0.1.97
+anyio==3.6.2
+fastapi==0.95.0
+pydantic==1.10.7
+sniffio==1.3.0
+starlette==0.26.1
+uvloop==0.17.0
+torch==2.0.0 
+uvicorn==0.17.0

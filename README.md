@@ -1,2 +1,9 @@
 # neutlan.model.deployment
-Classification and paraphrase
+
+Classification and paraphrase models
+
+Deploy models via 
+
+```
+make
+```
